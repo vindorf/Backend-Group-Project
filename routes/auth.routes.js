@@ -4,23 +4,21 @@ const bcryptjs = require("bcryptjs");
 const saltRounds = 10;
 const User = require("../models/User.model");
 const mongoose = require("mongoose");
-const {isLoggedIn , isLoggedOut} = require('../middleware/route-guard.js')
-
+const { isLoggedIn, isLoggedOut } = require("../middleware/route-guard.js");
+//
 router.get("/signup", isLoggedOut, (req, res) => res.render("auth/signup"));
 
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
 
-  User.find({email})
-  .then((user)=> {
-    if(user){
-      console.log('user already exist');
-     res.render('auth/signup', {errorMessage: 'user already exist'})
-       return;
+  User.find({ email }).then((user) => {
+    if (user) {
+      console.log("user already exist");
+      res.render("auth/signup", { errorMessage: "user already exist" });
+      return;
     }
-  })
+  });
 
- 
   if (!username || !email || !password) {
     res.render("auth/signup", {
       errorMessage:
@@ -65,14 +63,12 @@ router.post("/signup", (req, res, next) => {
         next(error);
       }
     });
-
-    
 });
 
 router.get("/login", isLoggedOut, (req, res) => res.render("auth/login"));
 
 router.post("/login", (req, res, next) => {
-    console.log('SESSION =====> ', req.session);
+  console.log("SESSION =====> ", req.session);
   const { email, password } = req.body;
 
   if (email === "" || password === "") {
@@ -92,8 +88,8 @@ router.post("/login", (req, res, next) => {
         return;
       } else if (bcryptjs.compareSync(password, user.password)) {
         req.session.currentUser = user;
-        res.redirect('/userProfile');
-        
+        res.redirect("/userProfile");
+
         //res.render("user/user-profile", { user });
       } else {
         console.log("Incorrect password. ");
@@ -105,21 +101,17 @@ router.post("/login", (req, res, next) => {
     .catch((error) => next(error));
 });
 
-router.post('/logout', isLoggedIn, (req, res, next) => {
-    req.session.destroy(err => {
-      if (err) next(err);
-      res.redirect('/');
-    });
+router.post("/logout", isLoggedIn, (req, res, next) => {
+  req.session.destroy((err) => {
+    if (err) next(err);
+    res.redirect("/");
   });
+});
 
+router.get("/userProfile", isLoggedIn, (req, res) => {
+  //return res.send("Hello world!");
 
-
-
-  router.get("/userProfile", isLoggedIn, (req, res) => {
-    //return res.send("Hello world!");
-    
-    res.render("user/user-profile", { userInSession: req.session.currentUser });
-  });
-
+  res.render("user/user-profile", { userInSession: req.session.currentUser });
+});
 
 module.exports = router;
