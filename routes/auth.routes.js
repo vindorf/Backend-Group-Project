@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const { isLoggedIn, isLoggedOut } = require("../middleware/route-guard.js");
 
 router.get("/signup", isLoggedOut, (req, res) => res.render("auth/signup"));
-
+// css is on the way !!!
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
   // hello world
