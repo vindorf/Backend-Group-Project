@@ -10,7 +10,10 @@ router.get("/signup", isLoggedOut, (req, res) => res.render("auth/signup"));
 
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
+
   // hello world
+
+
   User.find({ email }).then((user) => {
     if (user) {
       console.log("user already exist");
