@@ -5,11 +5,14 @@ const saltRounds = 10;
 const User = require("../models/User.model");
 const mongoose = require("mongoose");
 const { isLoggedIn, isLoggedOut } = require("../middleware/route-guard.js");
-//
+
 router.get("/signup", isLoggedOut, (req, res) => res.render("auth/signup"));
 
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
+
+  // hello world
+
 
   User.find({ email }).then((user) => {
     if (user) {
