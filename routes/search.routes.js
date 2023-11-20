@@ -21,8 +21,10 @@ router.get('/search', async (req, res) => {
     }
   });
 
-
-
+  router.get('/search-random',(req,res)=> {
+    //console.log('hello');
+    res.render('user/search-random', {layout: 'search_layout'}); 
+})
 
 
 
