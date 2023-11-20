@@ -11,15 +11,15 @@ router.get("/signup", isLoggedOut, (req, res) => res.render("auth/signup"));
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
 
+  User.find({email})
+  .then((user)=> {
+    if(user){
+      console.log('user already exist');
+     res.render('auth/signup', {errorMessage: 'user already exist'})
+       return;
+    }
+  })
 
-   User.find({email})
-   .then((user)=> {
-     if(user){
-       console.log('user already exist');
-      res.render('auth/signup', {errorMessage: 'user already exist'})
-        return;
-     }
-   })
  
   if (!username || !email || !password) {
     res.render("auth/signup", {

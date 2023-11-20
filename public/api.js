@@ -3,9 +3,9 @@ const getCocktailInfo = cName => {
       .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cName}`)
       .then(response => {
         console.log(response.data);
-        const drinks = response.data.drinks; // Alle Drinks in einer Variable speichern
+        const drinks = response.data.drinks; 
         const cocktailContainer = document.getElementById('cocktail-container');
-        cocktailContainer.innerHTML = ''; // Container leeren, um neue Ergebnisse anzuzeigen
+        cocktailContainer.innerHTML = ''; 
   
         if (!drinks) {
           alert(`No cocktails found for ${cName}.`);
@@ -48,4 +48,8 @@ const getCocktailInfo = cName => {
     const userInput = document.getElementById('c-name-input').value;
     getCocktailInfo(userInput);
   });
+  
+
+ 
+
   
