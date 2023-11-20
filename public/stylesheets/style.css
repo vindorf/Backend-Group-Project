@@ -98,7 +98,9 @@ ul li {
   line-height: 20px;
 }
 
-
+ol{
+  list-style: none;
+}
 
 nav{
   display: flex;
@@ -166,11 +168,16 @@ nav{
   display: inline-block;
 
 }
-
+.cocktail-info{
+  border: solid 1px aliceblue;
+  margin-bottom: 10px;
+}
 
 #cocktail-container{
-  display: flex;
+  /* display: flex;
   flex-direction: column;
+  justify-content: center; */
+  text-align: center;
 }
 
 img{
@@ -183,4 +190,7 @@ img:hover{
   scale:2;
 }
 
-
+#rdm-container{
+  border: solid 1px aliceblue;
+  margin-bottom: 10px;
+}
