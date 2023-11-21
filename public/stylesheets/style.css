@@ -54,6 +54,8 @@ button, input{
 }
 button{
   background-color: #43a3e6;
+  border: none;
+  border-radius: 3px;
   
 }
 
@@ -193,4 +195,18 @@ img:hover{
 #rdm-container{
   border: solid 1px aliceblue;
   margin-bottom: 10px;
+}
+.language-container{
+  margin: 20px;
+}
+#lang{
+  background-color: #43a3e6;
+  color: aliceblue;
+  width: 100px;
+  height: 30px;
+  font-size: large;
+}
+#lang:hover{
+  background-color: aliceblue;
+  color: #43a3e6;
 }
