@@ -42,7 +42,7 @@ window.addEventListener('load',() => {
             const image = document.createElement('img');
             image.src = cDetail.strDrinkThumb;
             drinkDiv.appendChild(image);
-  
+
             
             const items = [
               cDetail.strIngredient1, 
@@ -50,6 +50,27 @@ window.addEventListener('load',() => {
               cDetail.strIngredient4,
               cDetail.strIngredient5
             ];
+
+          const image = document.createElement('img');
+          image.src = cDetail.strDrinkThumb;
+          drinkDiv.appendChild(image);
+
+          
+          const items = [
+            cDetail.strIngredient1, 
+            cDetail.strIngredient2, 
+            cDetail.strIngredient4,
+            cDetail.strIngredient5
+          ];
+
+          items.forEach((itemText) => {
+            const p = document.createElement('p');
+            p.innerHTML = itemText;
+            drinkDiv.appendChild(p);
+          });
+
+          // cocktailContainer.appendChild(ol);
+
   
             items.forEach((itemText) => {
               const p = document.createElement('p');
