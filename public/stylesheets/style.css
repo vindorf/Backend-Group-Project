@@ -1,11 +1,11 @@
 /* public/stylesheets/style.css */
 body {
   padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #000;
 }
 
-
+/* bla bla  */
 
 a {
   color: aliceblue;
@@ -15,7 +15,7 @@ a {
 }
 a:hover {
   color: #43a3e6;
-  
+
   text-decoration: none;
   font-size: 1.5em;
   margin: 50px;
@@ -43,20 +43,19 @@ form button {
   margin-bottom: 20px;
 }
 
-button, input{
+button,
+input {
   box-sizing: border-box;
   font-size: 14px;
   outline: 0;
   padding: 4px;
   width: 100%;
   margin-bottom: 20px;
-  
 }
-button{
+button {
   background-color: #43a3e6;
   border: none;
   border-radius: 3px;
-  
 }
 
 form button {
@@ -100,15 +99,14 @@ ul li {
   line-height: 20px;
 }
 
-ol{
+ol {
   list-style: none;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-evenly;
 }
-
 
 #form h2 {
   display: flex;
@@ -132,7 +130,7 @@ nav{
 #logout-form button {
   width: 120px;
 }
-.age-btn{
+.age-btn {
   margin: 30px;
   height: 50px;
   width: 150px;
@@ -141,12 +139,12 @@ nav{
   border-radius: 4px;
   color: #fff;
 }
-.main{
+.main {
   /* background-color:rgba(66, 162, 230, 0.3); */
-  background-image: url('/images/GalaktischLeckereCocktails.jpg');
-  background-size: cover; 
+  background-image: url("/images/GalaktischLeckereCocktails.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  opacity: 1; 
+  opacity: 1;
   text-align: center;
   color: aliceblue;
   width: 400px;
@@ -154,7 +152,7 @@ nav{
   margin: auto;
   padding-top: 50px;
 }
-.search-main{
+.search-main {
   text-align: center;
   color: aliceblue;
   width: 400px;
@@ -163,52 +161,50 @@ nav{
   padding-top: 50px;
 }
 
-.text{
+.text {
   margin-top: 80px;
 }
- .cont {
+.cont {
   display: inline-block;
-
 }
-.cocktail-info{
+.cocktail-info {
   border: solid 1px aliceblue;
   margin-bottom: 10px;
 }
 
-#cocktail-container{
+#cocktail-container {
   /* display: flex;
   flex-direction: column;
   justify-content: center; */
   text-align: center;
 }
 
-img{
+img {
   width: 300px;
-  transition: transform 1s, scale 1s; 
-  transform-origin: center
+  transition: transform 1s, scale 1s;
+  transform-origin: center;
 }
-img:hover{
+img:hover {
   transform: rotate(360deg);
-  scale:2;
+  scale: 2;
 }
 
-#rdm-container{
+#rdm-container {
   border: solid 1px aliceblue;
   margin-bottom: 10px;
 }
 
-.language-container{
+.language-container {
   margin: 20px;
 }
-#lang{
+#lang {
   background-color: #43a3e6;
   color: aliceblue;
   width: 100px;
   height: 30px;
   font-size: large;
 }
-#lang:hover{
+#lang:hover {
   background-color: aliceblue;
   color: #43a3e6;
 }
-
