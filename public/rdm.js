@@ -1,5 +1,11 @@
 window.addEventListener('load', () => {
     const rdmBtn = document.getElementById('rdm-btn');
+
+
+
+  
+
+
   rdmBtn.addEventListener('click', ()=>{
 
     const rdmContainer = document.getElementById('rdm-container');
@@ -18,6 +24,18 @@ window.addEventListener('load', () => {
           const img = document.createElement('img');
           img.setAttribute('src', cDetail.strDrinkThumb);
           rdmContainer.appendChild(img);
+
+          const items = [
+            cDetail.strIngredient1, 
+            cDetail.strIngredient2, 
+            cDetail.strIngredient4,
+            cDetail.strIngredient5
+          ];
+          items.forEach((itemText) => {
+            const p = document.createElement('p');
+            p.innerHTML = itemText;
+            rdmContainer.appendChild(p);
+          });
           const pInst = document.createElement('p');
           pInst.innerHTML = cDetail.strInstructions;
           rdmContainer.appendChild(pInst);
