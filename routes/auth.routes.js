@@ -117,7 +117,7 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
 
 router.post(
   "/userProfile",
-  fileUploader.single("movie-cover-image"),
+  fileUploader.single("user-profil-image"),
   (req, res) => {
     const userId = req.session.currentUser._id;
     console.log("1 =>", req.session.currentUser.imageURL);

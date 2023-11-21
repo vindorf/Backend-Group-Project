@@ -3,11 +3,11 @@
 
   <form action="/userProfile" method="post" enctype="multipart/form-data">
     <label>Add Image:
-      <input type="file" name="movie-cover-image" />
-      <button type="submit">Create</button>
+      <input type="file" name="user-profil-image" />
+      <button type="submit">Create your Image</button>
     </label>
   </form>
-  <img src="{{userInSession.imageURL}}" alt="" style="width: 100px;" />
+  <img src="{{userInSession.imageURL}}" alt="" style="width: 120px;" class="userPIC"/>
   <h2>{{userInSession.username}}!</h2>
   <p>This is your profile page my friend!</p>
   <section>
