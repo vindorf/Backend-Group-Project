@@ -1,24 +1,24 @@
 /* public/stylesheets/style.css */
 body {
   padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   background-color: #000;
 }
 
-
+/* bla bla  */
 
 a {
   color: aliceblue;
   text-decoration: none;
   font-size: 1.5em;
-  margin: 50px;
+  margin: 38px;
 }
 a:hover {
   color: #43a3e6;
-  
+
   text-decoration: none;
   font-size: 1.5em;
-  margin: 50px;
 }
 form {
   margin: 30px auto;
@@ -31,33 +31,38 @@ form label {
   margin-bottom: 10px;
   text-align: center;
   width: 100%;
+  
 }
 
 form input,
 form button {
-  box-sizing: border-box;
+
   font-size: 14px;
-  outline: 0;
-  padding: 4px;
+  padding: 10px;
   width: 100%;
   margin-bottom: 20px;
+  border-radius: 20px;
+opacity: 0.8;
+background: #DBDCDC;
+border: none; 
+outline: none; 
 }
 
-button, input{
+/* button,
+input {
   box-sizing: border-box;
   font-size: 14px;
   outline: 0;
   padding: 4px;
   width: 100%;
   margin-bottom: 20px;
-  
-}
-button{
+} */
+
+/* button {
   background-color: #43a3e6;
   border: none;
   border-radius: 3px;
-  
-}
+} */
 
 form button {
   background: #43a3e6;
@@ -65,18 +70,19 @@ form button {
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
+  /* display: relative; */
+  font-size: 20px;
   padding: 8px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: 0.3s ease background;
-  width: 100%;
+  /* text-decoration: none;
+  text-transform: uppercase; */
+  /* transition: 0.3s ease background;
+  width: 100%; */
 }
+
 
 form button:hover {
   background: #fff;
-  color: #43a3e6;
+
   transition: 0.3s ease background;
 }
 
@@ -100,19 +106,19 @@ ul li {
   line-height: 20px;
 }
 
-ol{
+ol {
   list-style: none;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-evenly;
 }
 
-
 #form h2 {
   display: flex;
   justify-content: center;
+  margin-left: 175px;
 }
 
 /* #to-left {
@@ -125,36 +131,69 @@ nav{
   font-size: 2em;
 }
 
-#logout-form {
+/* #logout-form {
   display: inline;
+  position: relative;
+} */
+
+#logout-form {
+  position: relative;
+  bottom: -195px;
+  right: -280px;
 }
 
 #logout-form button {
-  width: 120px;
-}
-.age-btn{
-  margin: 30px;
+  width: 140px;
   height: 50px;
-  width: 150px;
-  background: rgb(66, 162, 230);
-  border: 1px solid #43a3e6;
-  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 19px;
+  background: #43a3e6;
+}
+
+/* wait start */
+/* #button-test {
+  width: 140px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 19px;
+  background: #43a3e6;
+} */
+/* wait finish */
+
+/* #logout-form button {
+  width: 140px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  bottom: 20px;
+  right: 650px;
+  border-radius: 19px;
+  background: #43a3e6;
+} */
+.age-btn {
+  width: 140px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 19px;
+  background: #43a3e6;
   color: #fff;
+  font-size: 20px;
 }
-.main{
+.main {
   /* background-color:rgba(66, 162, 230, 0.3); */
-  background-image: url('/images/GalaktischLeckereCocktails.jpg');
-  background-size: cover; 
+  background-image: url("/images/GalaktischLeckereCocktails.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  opacity: 1; 
+  font-family: "Roboto", sans-serif;
+  /* opacity: 1;
   text-align: center;
-  color: aliceblue;
-  width: 400px;
-  height: 700px;
+  color: aliceblue; */
+  width: 470px;
+  height: 900px;
   margin: auto;
   padding-top: 50px;
 }
-.search-main{
+.search-main {
   text-align: center;
   color: aliceblue;
   width: 400px;
@@ -163,63 +202,84 @@ nav{
   padding-top: 50px;
 }
 
-.text{
-  margin-top: 80px;
+h3 {
+  margin-top: 134px;
+
+  color: aliceblue;
+  width: 191px;
+  height: 85px;
+  flex-shrink: 0;
+  color: #f5f5f5;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
- .cont {
+
+.starter {
+  margin-top: 134px;
+  color: aliceblue;
+  width: 191px;
+  height: 85px;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: aliceblue;
+  width: 191px;
+  height: 383px;
+  flex-shrink: 0;
+  color: #f5f5f5;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+/* 
+.cont {
   display: inline-block;
-
 }
-.cocktail-info{
+.cocktail-info {
   border: solid 1px aliceblue;
   margin-bottom: 10px;
 }
 
-#cocktail-container{
+#cocktail-container {
   /* display: flex;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center; 
   text-align: center;
-}
+}*/
 
-img{
+img {
   width: 300px;
-  transition: transform 1s, scale 1s; 
-  transform-origin: center
+  transition: transform 1s, scale 1s;
+  transform-origin: center;
 }
-img:hover{
+img:hover {
   transform: rotate(360deg);
-  scale:2;
+  scale: 2;
 }
 
-#rdm-container{
+#rdm-container {
   border: solid 1px aliceblue;
   margin-bottom: 10px;
 }
 
-.language-container{
+.language-container {
   margin: 20px;
 }
-#lang{
+#lang {
   background-color: #43a3e6;
   color: aliceblue;
   width: 100px;
   height: 30px;
   font-size: large;
 }
-#lang:hover{
+#lang:hover {
   background-color: aliceblue;
   color: #43a3e6;
-}
-.userPIC{
-  border: none;
-  border-radius: 50%;
-}
-input[type="file"] {
-  padding: 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  width: 120px;
-  max-width: 100%;
 }

@@ -1,33 +1,42 @@
-<!DOCTYPE html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>{{appTitle}}</title>
-      <link rel="stylesheet" href="/stylesheets/style.css" />
-      {{!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> --}}
-   </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{appTitle}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    {{! <script src="https://unpkg.com/axios/dist/axios.min.js"></script> }}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-   <body>
-     <nav>
-      <ul>
-       <li id="to-right" >
-       <a href="/signup" >Signup</a> 
-       <a href="/login">Login</a> 
+  </head>
+
+  <body>
+    <section class="search-main">
+      <nav>
+        <ul>
+          <li id="to-right">
+            <a href="/signup">Signup</a>
+            <a href="/login">Login</a>
+            <a href="/userProfile">Profile</a>
+       
+            </form>
+            {{! <a href="/userProfile">Profile</a> }}
+          </li>
+        </ul>
+      </nav>
+      <main>{{{body}}}</main>
         <form id="logout-form" action="/logout" method="POST">
-         <button>Logout</button>
+              <button>Logout</button>
         </form>
-         <a href="/userProfile">Profile</a> 
-       </li>
-      </ul>
-    </nav>
-    <main class="search-main">{{{body}}}</main>
-      
-      
-      <script src="/js/script.js"></script>
-      
-   </body>
+    </section>
+    <script src="/js/script.js"></script>
+
+  </body>
 
 </html>
