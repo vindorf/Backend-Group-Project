@@ -117,7 +117,7 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
 
 router.post(
   "/userProfile",
-  fileUploader.single("movie-cover-image"),
+  fileUploader.single("user-prof-image"),
   (req, res) => {
     const userId = req.session.currentUser._id;
     console.log("1 =>", req.session.currentUser.imageURL);
@@ -134,5 +134,20 @@ router.post(
     });
   }
 );
+
+router.post("/account-delete", (req, res) => {
+  const userId = req.session.currentUser._id;
+
+  User.deleteOne({ _id: userId })
+    .then(() => {
+      req.session.destroy((err) => {
+        if (err) next(err);
+        res.redirect("/");
+      });
+    })
+    .catch(() => {
+      console.log("blabla");
+    });
+});
 
 module.exports = router;
