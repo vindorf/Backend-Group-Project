@@ -11,10 +11,12 @@
  <form action="/account-delete" method="post">
      <button type="submit">Delete Account</button>
  </form>
-  
+  <section class="user-pic-name">
   <img src="{{userInSession.imageURL}}" alt="" style="width: 100px;" class="userPIC"/>
   <h2>{{userInSession.username}}!</h2>
   <p>This is your profile page my friend!</p>
+  </section>
+  
   <section>
     <button>
       <a href="/search">Search for Cocktail</a>
