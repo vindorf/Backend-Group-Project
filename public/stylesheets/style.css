@@ -211,4 +211,15 @@ img:hover{
   background-color: aliceblue;
   color: #43a3e6;
 }
-
+.userPIC{
+  border: none;
+  border-radius: 50%;
+}
+input[type="file"] {
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 120px;
+  max-width: 100%;
+}
