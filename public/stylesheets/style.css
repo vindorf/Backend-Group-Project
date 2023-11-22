@@ -11,8 +11,12 @@ body {
 a {
   color: aliceblue;
   text-decoration: none;
+
   font-size: 1.5em;
   margin: 38px;
+
+  
+
 }
 a:hover {
   color: #43a3e6;
@@ -21,7 +25,7 @@ a:hover {
   font-size: 1.5em;
 }
 form {
-  margin: 30px auto;
+  margin: 10px auto 5px;
   width: 380px;
 }
 
@@ -48,21 +52,16 @@ border: none;
 outline: none; 
 }
 
-/* button,
-input {
-  box-sizing: border-box;
-  font-size: 14px;
-  outline: 0;
-  padding: 4px;
-  width: 100%;
-  margin-bottom: 20px;
-} */
 
-/* button {
-  background-color: #43a3e6;
-  border: none;
-  border-radius: 3px;
-} */
+
+
+  
+}
+button:hover{
+  background-color: aliceblue;
+  color:#43a3e6;
+}
+
 
 form button {
   background: #43a3e6;
@@ -70,6 +69,7 @@ form button {
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
+
   /* display: relative; */
   font-size: 20px;
   padding: 8px 16px;
@@ -77,6 +77,15 @@ form button {
   text-transform: uppercase; */
   /* transition: 0.3s ease background;
   width: 100%; */
+
+  display: inline-block;
+  font-size: 14px;
+  padding: 4px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s ease background;
+  width: 100%;
+
 }
 
 
@@ -150,26 +159,7 @@ nav {
   background: #43a3e6;
 }
 
-/* wait start */
-/* #button-test {
-  width: 140px;
-  height: 50px;
-  font-family: "Roboto", sans-serif;
-  border-radius: 19px;
-  background: #43a3e6;
-} */
-/* wait finish */
 
-/* #logout-form button {
-  width: 140px;
-  height: 50px;
-  font-family: "Roboto", sans-serif;
-  position: absolute;
-  bottom: 20px;
-  right: 650px;
-  border-radius: 19px;
-  background: #43a3e6;
-} */
 .age-btn {
   width: 140px;
   height: 50px;
@@ -185,9 +175,10 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;
-  /* opacity: 1;
-  text-align: center;
-  color: aliceblue; */
+ 
+
+  color: aliceblue;
+
   width: 470px;
   height: 900px;
   margin: auto;
@@ -283,3 +274,21 @@ img:hover {
   background-color: aliceblue;
   color: #43a3e6;
 }
+
+
+.userPIC{
+  border: none;
+  border-radius: 50%;
+}
+input[type="file"] {
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 120px;
+  max-width: 100%;
+}
+.user-pic-name{
+  margin: 150px auto 150px;
+}
+
