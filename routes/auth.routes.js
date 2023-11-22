@@ -4,11 +4,11 @@ const bcryptjs = require("bcryptjs");
 const saltRounds = 10;
 const User = require("../models/User.model");
 const mongoose = require("mongoose");
-const { isLoggedIn, isLoggedOut } = require("../middleware/route-guard.js");
+const { isLoggedIn, isIn, isLoggedOut } = require("../middleware/route-guard.js");
 const fileUploader = require("../config/cloudinary.config");
 
-router.get("/signup", isLoggedOut, (req, res) => res.render("auth/signup"));
-// css is on the way !!!
+router.get("/signup",  isIn,(req, res) => res.render("auth/signup"));
+// hier war isLoggedOut
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
 
@@ -66,8 +66,8 @@ router.post("/signup", (req, res, next) => {
     });
 });
 
-router.get("/login", isLoggedOut, (req, res) => res.render("auth/login"));
-
+router.get("/login", isIn, (req, res) => res.render("auth/login"));
+// isLoggedOut
 router.post("/login", (req, res, next) => {
   console.log("SESSION =====> ", req.session);
   const { email, password } = req.body;
