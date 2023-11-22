@@ -5,20 +5,18 @@ const saltRounds = 10;
 const User = require("../models/User.model");
 const mongoose = require("mongoose");
 const { isLoggedIn, isLoggedOut } = require("../middleware/route-guard.js");
+const fileUploader = require("../config/cloudinary.config");
 
 router.get("/signup", isLoggedOut, (req, res) => res.render("auth/signup"));
 // css is on the way !!!
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
 
-
-  User.findOne({email})
-  .then((user)=> {
-    if(user){
-      console.log('user already exist');
-     res.render('auth/signup', {errorMessage: 'user already exist'})
-       return;
-
+  User.findOne({ email }).then((user) => {
+    if (user) {
+      console.log("user already exist");
+      res.render("auth/signup", { errorMessage: "user already exist" });
+      return;
     }
   });
 
@@ -116,5 +114,25 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
 
   res.render("user/user-profile", { userInSession: req.session.currentUser });
 });
+
+router.post(
+  "/userProfile",
+  fileUploader.single("movie-cover-image"),
+  (req, res) => {
+    const userId = req.session.currentUser._id;
+    console.log("1 =>", req.session.currentUser.imageURL);
+    console.log("2 =>", req.file.path);
+    User.findByIdAndUpdate(
+      userId,
+      { $set: { imageURL: req.file.path } },
+      { new: true }
+    ).then((update) => {
+      console.log(update);
+
+      req.session.currentUser.imageURL = req.file.path;
+      res.redirect("/userProfile"); // or use res.render if redirecting is not desired
+    });
+  }
+);
 
 module.exports = router;
