@@ -19,7 +19,7 @@ module.exports = (app) => {
        // maxAge: 60000, // 60 * 1000 ms === 1 min
       },
       store: MongoStore.create({
-        mongoUrl: process.env.MONGODB_URI || 'mongodb+srv://manwein12345:OLVSzENAJFlE69cS@cluster0.hcpbm3h.mongodb.net/'
+        mongoUrl: process.env.MONGODB_URI || 'mongodb+srv://lauralauria89:yLY4NQZsBsskLGqt@cluster0.hboe8a8.mongodb.net/'
       })
     })
   );

@@ -1,24 +1,28 @@
 /* public/stylesheets/style.css */
 body {
   padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   background-color: #000;
 }
 
-
+/* bla bla  */
 
 a {
   color: aliceblue;
   text-decoration: none;
-  font-size: 17px;
-  margin: 50px;
+
+  font-size: 1.5em;
+  margin: 38px;
+
+  
+
 }
 a:hover {
   color: #43a3e6;
-  
+
   text-decoration: none;
   font-size: 1.5em;
-  margin: 50px;
 }
 form {
   margin: 10px auto 5px;
@@ -31,33 +35,26 @@ form label {
   margin-bottom: 10px;
   text-align: center;
   width: 100%;
+  
 }
 
 form input,
 form button {
-  box-sizing: border-box;
+
   font-size: 14px;
-  outline: 0;
-  padding: 4px;
+  padding: 10px;
   width: 100%;
   margin-bottom: 20px;
+  border-radius: 20px;
+opacity: 0.8;
+background: #DBDCDC;
+border: none; 
+outline: none; 
 }
 
-button, input{
-  box-sizing: border-box;
-  font-size: 14px;
-  outline: 0;
-  padding: 4px;
-  width: 100%;
-  margin-bottom: 20px;
-  
-}
-button{
-  background-color: #43a3e6;
-  color:aliceblue;
-  border: none;
-  border-radius: 3px;
-  width: 380px;
+
+
+
   
 }
 button:hover{
@@ -65,12 +62,22 @@ button:hover{
   color:#43a3e6;
 }
 
+
 form button {
   background: #43a3e6;
   border: 1px solid #43a3e6;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
+
+  /* display: relative; */
+  font-size: 20px;
+  padding: 8px 16px;
+  /* text-decoration: none;
+  text-transform: uppercase; */
+  /* transition: 0.3s ease background;
+  width: 100%; */
+
   display: inline-block;
   font-size: 14px;
   padding: 4px 16px;
@@ -78,11 +85,13 @@ form button {
   text-transform: uppercase;
   transition: 0.3s ease background;
   width: 100%;
+
 }
+
 
 form button:hover {
   background: #fff;
-  color: #43a3e6;
+
   transition: 0.3s ease background;
 }
 
@@ -106,19 +115,19 @@ ul li {
   line-height: 20px;
 }
 
-ol{
+ol {
   list-style: none;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-evenly;
 }
 
-
 #form h2 {
   display: flex;
   justify-content: center;
+  margin-left: 175px;
 }
 
 /* #to-left {
@@ -131,36 +140,51 @@ nav{
   font-size: 2em;
 }
 
-#logout-form {
+/* #logout-form {
   display: inline;
+  position: relative;
+} */
+
+#logout-form {
+  position: relative;
+  bottom: -195px;
+  right: -280px;
 }
 
 #logout-form button {
-  width: 120px;
-}
-.age-btn{
-  margin: 30px;
+  width: 140px;
   height: 50px;
-  width: 150px;
-  background: rgb(66, 162, 230);
-  border: 1px solid #43a3e6;
-  border-radius: 4px;
-  color: #fff;
+  font-family: "Roboto", sans-serif;
+  border-radius: 19px;
+  background: #43a3e6;
 }
-.main{
+
+
+.age-btn {
+  width: 140px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 19px;
+  background: #43a3e6;
+  color: #fff;
+  font-size: 20px;
+}
+.main {
   /* background-color:rgba(66, 162, 230, 0.3); */
-  background-image: url('/images/GalaktischLeckereCocktails.jpg');
-  background-size: cover; 
+  background-image: url("/images/GalaktischLeckereCocktails.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  opacity: 1; 
-  text-align: center;
+  font-family: "Roboto", sans-serif;
+ 
+
   color: aliceblue;
+
   width: 470px;
   height: 900px;
   margin: auto;
   padding-top: 50px;
 }
-.search-main{
+.search-main {
   text-align: center;
   color: aliceblue;
   width: 400px;
@@ -169,54 +193,89 @@ nav{
   padding-top: 50px;
 }
 
-.text{
-  margin-top: 80px;
-}
- .cont {
-  display: inline-block;
+h3 {
+  margin-top: 134px;
 
+  color: aliceblue;
+  width: 191px;
+  height: 85px;
+  flex-shrink: 0;
+  color: #f5f5f5;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.cocktail-info{
+
+.starter {
+  margin-top: 134px;
+  color: aliceblue;
+  width: 191px;
+  height: 85px;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: aliceblue;
+  width: 191px;
+  height: 383px;
+  flex-shrink: 0;
+  color: #f5f5f5;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+/* 
+.cont {
+  display: inline-block;
+}
+.cocktail-info {
   border: solid 1px aliceblue;
   margin-bottom: 10px;
 }
 
-#cocktail-container{
+#cocktail-container {
   /* display: flex;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center; 
   text-align: center;
-}
+}*/
 
-img{
+img {
   width: 300px;
-  transition: transform 1s, scale 1s; 
-  transform-origin: center
+  transition: transform 1s, scale 1s;
+  transform-origin: center;
 }
-img:hover{
+img:hover {
   transform: rotate(360deg);
-  scale:2;
+  scale: 2;
 }
 
-#rdm-container{
+#rdm-container {
   border: solid 1px aliceblue;
   margin-bottom: 10px;
 }
 
-.language-container{
+.language-container {
   margin: 20px;
 }
-#lang{
+#lang {
   background-color: #43a3e6;
   color: aliceblue;
   width: 100px;
   height: 30px;
   font-size: large;
 }
-#lang:hover{
+#lang:hover {
   background-color: aliceblue;
   color: #43a3e6;
 }
+
+
 .userPIC{
   border: none;
   border-radius: 50%;
@@ -232,3 +291,4 @@ input[type="file"] {
 .user-pic-name{
   margin: 150px auto 150px;
 }
+
