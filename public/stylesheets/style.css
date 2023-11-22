@@ -1,7 +1,8 @@
 /* public/stylesheets/style.css */
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   background-color: #000;
 }
 
@@ -125,10 +126,18 @@ nav {
 
 #logout-form {
   display: inline;
+  position: relative;
 }
 
 #logout-form button {
-  width: 120px;
+  width: 140px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  bottom: 20px;
+  right: 650px;
+  border-radius: 19px;
+  background: #43a3e6;
 }
 .age-btn {
   margin: 30px;
@@ -144,26 +153,53 @@ nav {
   background-image: url("/images/GalaktischLeckereCocktails.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 1;
+  font-family: "Roboto", sans-serif;
+  /* opacity: 1;
   text-align: center;
-  color: aliceblue;
-  width: 400px;
-  height: 700px;
+  color: aliceblue; */
+  width: 416px;
+  height: 814px;
   margin: auto;
   padding-top: 50px;
 }
-.search-main {
+/* .search-main {
   text-align: center;
   color: aliceblue;
   width: 400px;
   height: 700px;
   margin: auto;
   padding-top: 50px;
+} */
+
+h3 {
+  margin-top: 180px;
+
+  color: aliceblue;
+  width: 191px;
+  height: 85px;
+  flex-shrink: 0;
+  color: #f5f5f5;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .text {
-  margin-top: 80px;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: aliceblue;
+  width: 191px;
+  height: 383px;
+  flex-shrink: 0;
+  color: #f5f5f5;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.7;
 }
+
+/* 
 .cont {
   display: inline-block;
 }
@@ -175,9 +211,9 @@ nav {
 #cocktail-container {
   /* display: flex;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center; 
   text-align: center;
-}
+}*/
 
 img {
   width: 300px;
