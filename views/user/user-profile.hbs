@@ -3,20 +3,26 @@
 
   <form action="/userProfile" method="post" enctype="multipart/form-data">
     <label>Add Image:
-      <input type="file" name="movie-cover-image" />
-      <button type="submit">Create</button>
+      <input type="file" name="user-prof-image" />
+      <button type="submit">Create Image</button>
     </label>
   </form>
-  
-  <img src="{{userInSession.imageURL}}" alt="" style="width: 100px;" class="userPIC"/>
+
+ <form action="/account-delete" method="post">
+     <button type="submit">Delete Account</button>
+ </form>
+  <section class="user-pic-name">
+  <img src="{{userInSession.imageURL}}" alt="" style="width: 150px;" class="userPIC"/>
   <h2>{{userInSession.username}}!</h2>
   <p>This is your profile page my friend!</p>
+  </section>
+  
   <section>
     <button>
-      <a href="/search">go search</a>
+      <a href="/search">Search for Cocktail</a>
     </button>
     <button>
-      <a href="/search-random">get random</a>
+      <a href="/search-random">Get random One</a>
     </button>
 
   </section>

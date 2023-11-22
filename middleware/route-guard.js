@@ -5,6 +5,14 @@ const isLoggedIn = (req,res,next)=>{
  next();
 };
 
+const isIn = (req,res,next)=>{
+    if(req.session.currentUser) {
+        return res.redirect('/userProfile')
+    }
+    next();
+}
+//
+
 const isLoggedOut = (req,res,next)=>{
     if(req.session.currentUser){
         return res.redirect('/');
@@ -12,4 +20,4 @@ const isLoggedOut = (req,res,next)=>{
     next();
 };
 
-module.exports = {isLoggedIn, isLoggedOut};
+module.exports = {isLoggedIn, isIn, isLoggedOut};

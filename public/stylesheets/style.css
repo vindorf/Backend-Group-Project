@@ -10,7 +10,7 @@ body {
 a {
   color: aliceblue;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 17px;
   margin: 50px;
 }
 a:hover {
@@ -21,7 +21,7 @@ a:hover {
   margin: 50px;
 }
 form {
-  margin: 30px auto;
+  margin: 10px auto 5px;
   width: 380px;
 }
 
@@ -54,9 +54,15 @@ button, input{
 }
 button{
   background-color: #43a3e6;
+  color:aliceblue;
   border: none;
   border-radius: 3px;
+  width: 380px;
   
+}
+button:hover{
+  background-color: aliceblue;
+  color:#43a3e6;
 }
 
 form button {
@@ -67,7 +73,7 @@ form button {
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
-  padding: 8px 16px;
+  padding: 4px 16px;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s ease background;
@@ -149,8 +155,8 @@ nav{
   opacity: 1; 
   text-align: center;
   color: aliceblue;
-  width: 400px;
-  height: 700px;
+  width: 470px;
+  height: 900px;
   margin: auto;
   padding-top: 50px;
 }
@@ -222,4 +228,7 @@ input[type="file"] {
   background-color: #f9f9f9;
   width: 120px;
   max-width: 100%;
+}
+.user-pic-name{
+  margin: 150px auto 150px;
 }
