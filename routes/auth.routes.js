@@ -4,21 +4,19 @@ const bcryptjs = require("bcryptjs");
 const saltRounds = 10;
 const User = require("../models/User.model");
 const mongoose = require("mongoose");
-const { isLoggedIn, isLoggedOut } = require("../middleware/route-guard.js");
+const { isLoggedIn, isIn, isLoggedOut } = require("../middleware/route-guard.js");
+const fileUploader = require("../config/cloudinary.config");
 
-router.get("/signup", isLoggedOut, (req, res) => res.render("auth/signup"));
-// css is on the way !!!
+router.get("/signup",  isIn,(req, res) => res.render("auth/signup"));
+// hier war isLoggedOut
 router.post("/signup", (req, res, next) => {
   const { username, email, password } = req.body;
 
-
-  User.findOne({email})
-  .then((user)=> {
-    if(user){
-      console.log('user already exist');
-     res.render('auth/signup', {errorMessage: 'user already exist'})
-       return;
-
+  User.findOne({ email }).then((user) => {
+    if (user) {
+      console.log("user already exist");
+      res.render("auth/signup", { errorMessage: "user already exist" });
+      return;
     }
   });
 
@@ -68,8 +66,8 @@ router.post("/signup", (req, res, next) => {
     });
 });
 
-router.get("/login", isLoggedOut, (req, res) => res.render("auth/login"));
-
+router.get("/login", isIn, (req, res) => res.render("auth/login"));
+// isLoggedOut
 router.post("/login", (req, res, next) => {
   console.log("SESSION =====> ", req.session);
   const { email, password } = req.body;
@@ -115,6 +113,41 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
   //return res.send("Hello world!");
 
   res.render("user/user-profile", { userInSession: req.session.currentUser });
+});
+
+router.post(
+  "/userProfile",
+  fileUploader.single("user-prof-image"),
+  (req, res) => {
+    const userId = req.session.currentUser._id;
+    console.log("1 =>", req.session.currentUser.imageURL);
+    console.log("2 =>", req.file.path);
+    User.findByIdAndUpdate(
+      userId,
+      { $set: { imageURL: req.file.path } },
+      { new: true }
+    ).then((update) => {
+      console.log(update);
+
+      req.session.currentUser.imageURL = req.file.path;
+      res.redirect("/userProfile"); // or use res.render if redirecting is not desired
+    });
+  }
+);
+
+router.post("/account-delete", (req, res) => {
+  const userId = req.session.currentUser._id;
+
+  User.deleteOne({ _id: userId })
+    .then(() => {
+      req.session.destroy((err) => {
+        if (err) next(err);
+        res.redirect("/");
+      });
+    })
+    .catch(() => {
+      console.log("blabla");
+    });
 });
 
 module.exports = router;
