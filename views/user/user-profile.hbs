@@ -1,23 +1,22 @@
-
-
 {{#if userInSession}}
- <h1>Welcome</h1>
-  <h2>{{ userInSession.username }}!</h2>
+  <h1>Welcome</h1>
+  <h2>{{userInSession.username}}!</h2>
   <p>This is your profile page my friend!</p>
-<section>
-<button>
-  <a href="/search">go search</a>
-</button>
-<button>
-  <a href="/search-random">get random</a>
-</button>
-   
-    
-</section>
-  {{!-- <button>
+  <section>
+    <button>
+      <a href="/search">go search</a>
+    </button>
+    <button>
+      <a href="/search-random">get random</a>
+    </button>
+    <button>
+      <a href="/api/favourites">your favourites</a>
+    </button>
+
+  </section>
+  {{! <button>
     <a href="/userProfile">Reload the page</a>
-  </button> --}}
+  </button> }}
 {{else}}
   <p>Still no logged in user, sorry!</p>
 {{/if}}
- 
