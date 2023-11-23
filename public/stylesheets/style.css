@@ -1,14 +1,20 @@
 /* public/stylesheets/style.css */
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font-family: "Roboto", sans-serif;
   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   background-color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* bla bla  */
 
 a {
+  font-family: "Roboto", sans-serif;
   color: aliceblue;
   text-decoration: none;
   font-size: 1.5em;
@@ -31,21 +37,19 @@ form label {
   margin-bottom: 10px;
   text-align: center;
   width: 100%;
-  
 }
 
 form input,
 form button {
-
   font-size: 14px;
   padding: 10px;
   width: 100%;
   margin-bottom: 20px;
   border-radius: 20px;
-opacity: 0.8;
-background: #DBDCDC;
-border: none; 
-outline: none; 
+  opacity: 0.8;
+  background: #dbdcdc;
+  border: none;
+  outline: none;
 }
 
 /* button,
@@ -79,7 +83,6 @@ form button {
   width: 100%; */
 }
 
-
 form button:hover {
   background: #fff;
 
@@ -93,6 +96,12 @@ form button:hover {
   margin: 20px auto;
   padding: 20px;
   width: 100%;
+}
+
+.account-btn {
+  font-family: "Roboto", sans-serif;
+  border-radius: 19px;
+  padding: 8px 12px;
 }
 
 ul {
@@ -116,9 +125,51 @@ nav {
 }
 
 #form h2 {
+  color: #fff;
   display: flex;
   justify-content: center;
   margin-left: 175px;
+}
+.user-profile {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-left: 25px;
+}
+
+.create-btn {
+  width: 140px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 19px;
+  background: #43a3e6;
+  margin-left: -250px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.profile-text {
+  color: #fff;
+}
+
+.profile-btn {
+  background: #43a3e6;
+  border: 1px solid #43a3e6;
+  border-radius: 4px;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+
+  padding: 8px 16px;
+  /* Additional styles for profile-btn */
+}
+
+.profile-btn:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: 0.3s ease background;
 }
 
 /* #to-left {
@@ -194,12 +245,16 @@ nav {
   padding-top: 50px;
 }
 .search-main {
+  opacity: 0.5;
+  background-color: #666;
   text-align: center;
   color: aliceblue;
-  width: 400px;
-  height: 700px;
   margin: auto;
+  width: 470px;
+  min-height: 100vh;
+
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 h3 {
@@ -282,4 +337,25 @@ img:hover {
 #lang:hover {
   background-color: aliceblue;
   color: #43a3e6;
+}
+
+.main {
+  /* background-color:rgba(66, 162, 230, 0.3); */
+  background-image: url("/images/GalaktischLeckereCocktails.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+  /* opacity: 1;
+  text-align: center;
+  color: aliceblue; */
+  width: 470px;
+  height: 900px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+#logout-form {
+  position: absolute;
+  top: 895px;
+  left: 200px;
 }

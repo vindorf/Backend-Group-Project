@@ -1,27 +1,34 @@
 {{#if userInSession}}
-  <h1>Welcome</h1>
 
+
+<div id="form"></div>  
+<h2 class="user-profile">Profile</h2>
   <form action="/userProfile" method="post" enctype="multipart/form-data">
+
+   
+  <img src="{{userInSession.imageURL}}" alt="" style="width: 100px;" class="userPIC"/>
     <label>Add Image:
       <input type="file" name="movie-cover-image" />
-      <button type="submit">Create</button>
+      <button class="create-btn" type="submit">Create</button>
     </label>
-  </form>
-  
-  <img src="{{userInSession.imageURL}}" alt="" style="width: 100px;" class="userPIC"/>
-  <h2>{{userInSession.username}}!</h2>
-  <p>This is your profile page my friend!</p>
-  <section>
-    <button>
-      <a href="/search">go search</a>
-    </button>
-    <button>
-      <a href="/search-random">get random</a>
+
+<h1 style="color: white;">Welcome</h1>
+  <h2 style="color: white;">{{userInSession.username}}!</h2>
+  <p style="color: white;">This is your profile page my friend!</p>
+
+    <div>
+    <button class="profile-btn">
+      <a href="/search">Go search</a>
     </button>
 
-  </section>
+    <button class="profile-btn">
+      <a href="/search-random">Surprise Me</a>
+    </button> 
+    </div>
+
 
 {{else}}
   <p>Still no logged in user, sorry!</p>
   <h2>{{userInSession.username}}!</h2>
 {{/if}}
+</form>

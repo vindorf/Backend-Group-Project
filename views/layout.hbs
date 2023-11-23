@@ -30,9 +30,14 @@
         </ul>
       </nav>
       <main>{{{body}}}</main>
+
+      {{!-- {{#if userInSession}} --}}
+
       <form id="logout-form" action="/logout" method="POST">
         <button id="button-test">Logout</button>
       </form>
+
+      {{!-- {{/if}} --}}
       {{! <form id="logout-form" action="/logout" method="POST">
               <button id="button-test">Logout</button>
         </form> }}
