@@ -52,13 +52,7 @@ window.addEventListener("load", () => {
             drinkDiv.appendChild(p);
           });
 
-          // cocktailContainer.appendChild(ol);
-
-          items.forEach((itemText) => {
-            const p = document.createElement("p");
-            p.innerHTML = itemText;
-            drinkDiv.appendChild(p);
-          });
+        
 
           if (selectedLanguage === "en") {
             console.log("en selected");
@@ -94,7 +88,7 @@ window.addEventListener("load", () => {
 
           heartButton.addEventListener("click", (req, res) => {
             heartButton.disabled = true;
-            heartButton.style.backgroundColor = "green";
+            heartButton.style.backgroundColor = "gray";
             heartButton.innerHTML = " 🚀 Added to favourites 🚀";
             // console.log(req.session.currentUser._id);
             fetch(`/api/add-to-favorite-list/${cDetail.idDrink}`)

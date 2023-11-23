@@ -1,6 +1,10 @@
 {{#if userInSession}}
   <h1>Welcome</h1>
-
+<section class="user-pic-name">
+  <img src="{{userInSession.imageURL}}" alt="" style="width: 190px;" class="userPIC"/>
+  <h2>{{userInSession.username}}!</h2>
+  <p>Remember to drink responsibly!</p>
+  <section class="func">
   <form action="/userProfile" method="post" enctype="multipart/form-data">
     <label>Add Image:
       <input type="file" name="user-prof-image" />
@@ -11,19 +15,15 @@
  <form action="/account-delete" method="post">
      <button type="submit">Delete Account</button>
  </form>
-  <section class="user-pic-name">
-  <img src="{{userInSession.imageURL}}" alt="" style="width: 150px;" class="userPIC"/>
-  <h2>{{userInSession.username}}!</h2>
-  <p>This is your profile page my friend!</p>
-  <section>
+  
     <button>
-      <a href="/search">go search</a>
+      <a href="/search">Search Cocktail</a>
     </button>
     <button>
-      <a href="/search-random">get random</a>
+      <a href="/search-random">Suprise me!</a>
     </button>
     <button>
-      <a href="/api/favourites">your favourites</a>
+      <a href="/api/favourites">Favourites</a>
     </button>
 
   </section>
