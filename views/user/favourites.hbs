@@ -1,0 +1,16 @@
+<h1>Your Favorites</h1>
+{{#if favourites}}
+
+  {{#each favourites}}
+    <div class="favourite-container">
+
+      <h1>{{this.strDrink}}</h1>
+      <p> {{strAlcoholic}}</p>
+      <img src="{{strDrinkThumb}}" alt="" width="200px" />
+      <p>{{strInstructions}}</p>
+    </div>
+  {{/each}}
+
+{{else}}
+  <p>No favorites yet.</p>
+{{/if}}

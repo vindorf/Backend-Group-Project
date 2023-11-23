@@ -15,18 +15,21 @@
   <img src="{{userInSession.imageURL}}" alt="" style="width: 150px;" class="userPIC"/>
   <h2>{{userInSession.username}}!</h2>
   <p>This is your profile page my friend!</p>
-  </section>
-  
   <section>
     <button>
-      <a href="/search">Search for Cocktail</a>
+      <a href="/search">go search</a>
     </button>
     <button>
-      <a href="/search-random">Get random One</a>
+      <a href="/search-random">get random</a>
+    </button>
+    <button>
+      <a href="/api/favourites">your favourites</a>
     </button>
 
   </section>
-
+  {{! <button>
+    <a href="/userProfile">Reload the page</a>
+  </button> }}
 {{else}}
   <p>Still no logged in user, sorry!</p>
   <h2>{{userInSession.username}}!</h2>
